@@ -1,0 +1,5 @@
+# Fichiers de configuration sensibles
+config.php
+
+# Répertoire non nécessaire
+other/
