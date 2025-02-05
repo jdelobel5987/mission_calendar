@@ -18,6 +18,8 @@ foreach ($events as $event) {
 $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::FULL, IntlDateFormatter::NONE, 'Europe/Paris', IntlDateFormatter::GREGORIAN, 'd MMMM yyyy'); // Création d'un objet IntlDateFormatter pour le formatage des dates en français
 $date = new DateTime("$year-$month-$day");
 $f_date = $formatter->format($date);
+
+include 'config.php';
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +29,7 @@ $f_date = $formatter->format($date);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Évènements LaManuEcology</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4JdLZHFeQgVI057ZNPPnynjzAWH_H5y0&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $google_maps_api_key; ?>&callback=initMap" async defer></script>
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
