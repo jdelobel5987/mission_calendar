@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f9f1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-calendar, .event-details {
+    /* max-width: 600px; */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #eafaf1;
+    border: 1px solid #cce8d5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #4caf50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+}
+
+th, td {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #cce8d5;
+}
+
+th {
+    background-color: #d3eec4;
+    color: #4caf50;
+}
+
+td {
+    background-color: #ffffff;
+    color: #333;
+}
+
+td:hover {
+    background-color: #d3eec4;
+    color: #333;
+}
+
+td.empty {
+    background-color: #f3f9f1;
+}
+
+td.weekend {
+    background-color: #f0f0f0;
+    color: #888;
+}
+
+td.weekend:hover {
+    background-color: #d3eec4;
+    color: #333;
+}
+
+td.today {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+td.event {
+    background-color: #ba68c8;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+td.event:hover, td.weekend.event:hover {
+    background-color: #7b1fa2; 
+    color: #ffffff;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+    display: block;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+.display-calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.display-calendar>i {
+    font-size: 24px;
+    color: #4caf50;
+    cursor: pointer;
+}
+
+.display-calendar>button>i {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* ////////////////////////////////////////
+////////// elements in event.php //////////
+//////////////////////////////////////// */
+
+.event-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #eafaf1;
+    border: 1px solid #cce8d5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-details h3 {
+    color: #4caf50;
+}
+
+.event-details th {
+    text-align: left;
+    color: #4caf50;
+    padding-right: 10px;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+}
