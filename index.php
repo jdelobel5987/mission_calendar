@@ -51,7 +51,7 @@ $years = range($thisYear-5, $thisYear+5);
                     <?php
                     $selectedMonth = isset($_GET['month'])? (int)$_GET['month'] : (int)$month; // si pas d'envoie formulaire, prend le mois en cours (mois 1-12)
                     foreach ($months as $index => $monthName) {
-                        $selected = ($index + 1 == $selectedMonth) ? "selected" : "";   // donne l'attribut selected au mois en cours
+                        $selected = ($index + 1 == $selectedMonth) ? "selected" : "";   // donne l'attribut selected au mois sélectionné, ou une chaine vide pour les autres mois
                         echo "<option value='" . ($index+1) . "' $selected>$monthName</option>";    // une option pour chaque mois de $months
                     }
                     ?>
