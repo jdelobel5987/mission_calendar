@@ -1,5 +1,7 @@
 # Fichiers de configuration sensibles
 config.php
 
-# Répertoire non nécessaire
+# Répertoires non nécessaire
 other/
+calendrierMVC/assets/img/
+calendrierMVC/assets/php/
