@@ -42,9 +42,13 @@ nextYear.addEventListener('click', () => {
 
 prevMonth.addEventListener('click', () => {
     if (selectedMonth.value == minMonth) {
-        selectedMonth.value = maxMonth;
-        selectedYear.value = parseInt(selectedYear.value) - 1;
-        displayButton.click();
+        if (selectedYear.value == minYear) {
+            return;
+        } else {
+            selectedMonth.value = maxMonth;
+            selectedYear.value = parseInt(selectedYear.value) - 1;
+            displayButton.click();
+        }
     } else {
         selectedMonth.value = parseInt(selectedMonth.value) - 1;
         displayButton.click();
@@ -53,9 +57,13 @@ prevMonth.addEventListener('click', () => {
 
 nextMonth.addEventListener('click', () => {
     if (selectedMonth.value == maxMonth) {
-        selectedMonth.value = minMonth;
-        selectedYear.value = parseInt(selectedYear.value) + 1;
-        displayButton.click();
+        if (selectedYear.value == maxYear) {
+            return;
+        } else {
+            selectedMonth.value = minMonth;
+            selectedYear.value = parseInt(selectedYear.value) + 1;
+            displayButton.click();
+        }
     } else {
         selectedMonth.value = parseInt(selectedMonth.value) + 1;
         displayButton.click();
